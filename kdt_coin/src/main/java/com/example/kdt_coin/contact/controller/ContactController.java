@@ -3,6 +3,7 @@ package com.example.kdt_coin.contact.controller;
 import com.example.kdt_coin.contact.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,6 +18,13 @@ public class ContactController {
     public String insertContact(@RequestParam HashMap<String, String> contact) {
         cs.insertContact(contact);
         System.out.println(contact);
+        return "redirect:/";
+    }
+
+    @GetMapping("/subscribe")
+    public String insertSubscribe(@RequestParam HashMap<String, String> subscribe) {
+        cs.insertSubscribe(subscribe);
+        System.out.println(subscribe);
         return "redirect:/";
     }
 }

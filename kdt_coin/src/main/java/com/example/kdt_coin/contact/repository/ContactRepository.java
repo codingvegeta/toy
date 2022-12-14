@@ -14,4 +14,7 @@ public class ContactRepository {
     public int insertContact(HashMap<String, String> contact) {
         return cm.insertContact(contact);
     }
+    public int insertSubscribe(HashMap<String, String> subscribe) {
+        return cm.insertSubscribe(subscribe);
+    }
 }

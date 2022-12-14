@@ -7,4 +7,6 @@ import java.util.HashMap;
 @Mapper
 public interface ContactMapper {
     int insertContact(HashMap<String, String> contact);
+
+    int insertSubscribe(HashMap<String, String> subscribe);
 }

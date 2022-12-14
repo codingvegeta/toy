@@ -17,5 +17,15 @@
             , #{message}
             )
 </insert>
+    <insert id="insertSubscribe" parameterType="HashMap">
+        insert into subscribe
+            (
+             email
+             )
+            values
+                (
+                 #{email}
+                 )
+    </insert>
 
 </mapper>
