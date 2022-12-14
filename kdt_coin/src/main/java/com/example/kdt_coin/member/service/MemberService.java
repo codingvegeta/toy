@@ -15,4 +15,9 @@ public class MemberService {
     public int insertMember(HashMap<String, String> member) {
         return memberRepository.insertMember(member);
     }
+
+    public HashMap<String, String> loginMember(HashMap<String, String> member) {
+        return memberRepository.loginMember(member);
+    }
+
 }

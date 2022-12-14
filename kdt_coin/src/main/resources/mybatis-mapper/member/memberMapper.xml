@@ -19,4 +19,15 @@
              ,#{detail}
             )
     </insert>
+
+    <select id="loginMember" parameterType="HashMap" resultType="HashMap">
+        select
+             email
+            , password
+        from member
+        where
+            email = #{email}
+        and
+            password = #{password}
+    </select>
 </mapper>

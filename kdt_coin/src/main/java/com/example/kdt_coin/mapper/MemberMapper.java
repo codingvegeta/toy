@@ -7,4 +7,6 @@ import java.util.HashMap;
 @Mapper
 public interface MemberMapper {
     int insertMember(HashMap<String, String> member);
+
+    HashMap<String, String> loginMember(HashMap<String, String> member);
 }

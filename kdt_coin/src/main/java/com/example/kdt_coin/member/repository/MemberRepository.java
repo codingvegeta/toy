@@ -16,4 +16,9 @@ public class MemberRepository {
         return memberMapper.insertMember(member);
     }
 
+    public HashMap<String, String> loginMember(HashMap<String, String> member) {
+        return memberMapper.loginMember(member);
+    }
+
+
 }
