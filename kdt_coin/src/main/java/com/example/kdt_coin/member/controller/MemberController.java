@@ -3,10 +3,13 @@ package com.example.kdt_coin.member.controller;
 import com.example.kdt_coin.member.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @Controller
@@ -33,4 +36,14 @@ public class MemberController {
         }
         return "redirect:/";
     }
+
+    @GetMapping("/hadBalance")
+    public @ResponseBody int hadBalance(HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            String email = String.valueOf(session.getAttribute("email"));
+            return memberService.hadBalance(email);
+        }
+        return 0;
+    }
+
 }

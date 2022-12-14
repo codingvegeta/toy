@@ -20,6 +20,15 @@
             )
     </insert>
 
+    <select id="hadBalance" parameterType="String" resultType="int">
+        select
+            IFNULL(sum(amount),0)
+            from
+            payment
+            where
+                email = #{email}
+    </select>
+
     <select id="loginMember" parameterType="HashMap" resultType="HashMap">
         select
              email

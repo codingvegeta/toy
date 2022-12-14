@@ -4,6 +4,7 @@ import com.example.kdt_coin.mapper.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @Repository
@@ -18,6 +19,10 @@ public class MemberRepository {
 
     public HashMap<String, String> loginMember(HashMap<String, String> member) {
         return memberMapper.loginMember(member);
+    }
+
+    public int hadBalance(String email) {
+        return memberMapper.hadBalance(email);
     }
 
 
