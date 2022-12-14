@@ -21,7 +21,7 @@ public class PageController {
         return "login";
     }
 
-    @GetMapping("goPat")
+    @GetMapping("/goPay")
     public String pay() {
         return "pay";
     }
