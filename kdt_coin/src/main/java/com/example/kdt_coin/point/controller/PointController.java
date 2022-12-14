@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
@@ -29,5 +30,25 @@ public class PointController {
             return "로그인 해주세요";
         }
         return "충전에 성공 하였습니다.";
+    }
+
+    @GetMapping("/checkBalance")
+    public String checkBalance(String total, HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            String email = (String) session.getAttribute("email");
+
+            double coinPrice = Double.parseDouble(total);
+            double balance = ps.checkBalance(email);
+            double result = balance - coinPrice;
+
+            System.out.println(result);
+
+            if (result >= 0) {
+                return "can";
+            } else {
+                return "cannot";
+            }
+        } else
+            return "login";
     }
 }

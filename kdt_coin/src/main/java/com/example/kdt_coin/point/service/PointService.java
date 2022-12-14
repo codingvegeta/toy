@@ -14,4 +14,7 @@ public class PointService {
     public int insertPayment(HashMap<String, String> payment) {
         return pr.insertPayment(payment);
     }
+    public double checkBalance(String email) {
+        return pr.checkBalance(email);
+    }
 }

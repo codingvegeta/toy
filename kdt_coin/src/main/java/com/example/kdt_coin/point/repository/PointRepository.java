@@ -14,4 +14,7 @@ public class PointRepository {
     public int insertPayment(HashMap<String, String> payment) {
         return pm.insertPayment(payment);
     }
+    public double checkBalance(String email) {
+        return pm.checkBalance(email);
+    }
 }

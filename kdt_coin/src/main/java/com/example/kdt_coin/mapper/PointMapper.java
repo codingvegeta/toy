@@ -7,4 +7,6 @@ import java.util.HashMap;
 @Mapper
 public interface PointMapper {
     int insertPayment(HashMap<String, String> payment);
+
+    double checkBalance(String total);
 }
