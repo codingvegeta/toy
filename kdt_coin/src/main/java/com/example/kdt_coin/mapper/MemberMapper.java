@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 @Mapper
 public interface MemberMapper {
@@ -12,4 +13,8 @@ public interface MemberMapper {
     HashMap<String, String> loginMember(HashMap<String, String> member);
 
     int hadBalance(String email);
+
+    ArrayList<HashMap<String, Objects>> havingBalance(String email);
+
+    int moneyBalance(String email);
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 @Service
 public class MemberService {
@@ -23,6 +24,14 @@ public class MemberService {
 
     public int hadBalance(String email) {
         return memberRepository.hadBalance(email);
+    }
+
+    public ArrayList<HashMap<String, Objects>> havingBalance(String email) {
+        return memberRepository.havingBalance(email);
+    }
+
+    public int moneyBalance(String email) {
+        return memberRepository.moneyBalance(email);
     }
 
 }

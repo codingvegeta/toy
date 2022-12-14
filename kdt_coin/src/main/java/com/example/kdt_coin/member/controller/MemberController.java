@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 @Controller
 public class MemberController {
@@ -42,6 +43,27 @@ public class MemberController {
         if (session.getAttribute("email") != null) {
             String email = String.valueOf(session.getAttribute("email"));
             return memberService.hadBalance(email);
+        }
+        return 0;
+    }
+
+    @GetMapping("/havingBalance")
+    public @ResponseBody ArrayList<HashMap<String, Objects>> havingBalance(HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            String email = String.valueOf(session.getAttribute("email"));
+            System.out.println("memberService.havingBalance(email) = " + memberService.havingBalance(email));
+
+            return memberService.havingBalance(email);
+        }
+        return null;
+    }
+
+
+    @GetMapping("/moneyBalance")
+    public @ResponseBody int moneyBalance(HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            String email = String.valueOf(session.getAttribute("email"));
+            return memberService.moneyBalance(email);
         }
         return 0;
     }
