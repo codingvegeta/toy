@@ -4,6 +4,7 @@ import com.example.kdt_coin.mapper.PointMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @Repository
@@ -16,5 +17,9 @@ public class PointRepository {
     }
     public double checkBalance(String email) {
         return pm.checkBalance(email);
+    }
+
+    public ArrayList<HashMap<String, Object>> pointList(String email) {
+        return pm.pointList(email);
     }
 }

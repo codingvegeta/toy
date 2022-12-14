@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 @RestController
@@ -50,5 +51,14 @@ public class PointController {
             }
         } else
             return "login";
+    }
+
+    @GetMapping("/pointList")
+    public @ResponseBody ArrayList<HashMap<String, Object>> pointList(HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            String email = String.valueOf(session.getAttribute("email"));
+            return ps.pointList(email);
+        }
+        return null;
     }
 }

@@ -21,4 +21,16 @@
                     IFNULL((select sum(total) from buy where email=#{email}),0)
             from dual
         </select>
+
+    <select id="pointList" parameterType="String" resultType="HashMap">
+        select
+              amount
+            , DATE_FORMAT(indate,'%Y-%m-%d %H:%i') indate
+            from
+                payment
+            where
+                email = #{email}
+        order by
+            indate DESC
+    </select>
 </mapper>
