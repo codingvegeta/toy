@@ -12,4 +12,24 @@
             id = #{id}
     </select>
 
+    <select id="selectMember" resultType="HashMap">
+        SELECT
+            email
+             ,name
+             ,phone
+             ,address
+             ,detail
+             ,DATE_FORMAT(indate,'%Y-%m-%d %H:%i') indate
+        FROM
+            member
+    </select>
+
+    <select id="selectCntMember" resultType="int">
+        select
+            count(*)
+        from
+            member
+
+    </select>
+
 </mapper>
