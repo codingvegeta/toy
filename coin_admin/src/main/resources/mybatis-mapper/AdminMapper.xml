@@ -49,6 +49,18 @@
             buy
     </select>
 
+    <select id="selectContact" resultType="HashMap">
+        select
+            id
+            ,name
+            ,email
+            ,phone
+            ,message
+            ,DATE_FORMAT(indate,'%Y-%m-%d %H:%i') indate
+        FROM
+            contact
+            </select>
+
     <select id="selectCntMember" resultType="int">
         select
             count(*)
