@@ -9,4 +9,9 @@ public class PageController {
     public String goLogin() {
         return "login";
     }
+
+    @GetMapping("/index")
+    public String goIndex() {
+        return "index";
+    }
 }
