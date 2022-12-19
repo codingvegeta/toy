@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac6f974c-cab1-48bb-982f-8e2299a0137b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/factory/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d311a177-4802-405a-a7f7-889f11ffe149" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +14,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2J37k4HJmC2KwuuDtTwJPeuwNKw" />
+  <component name="ProjectId" id="2J33YQzSKpaVXUHWcf4UlNNE1Z1" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -25,7 +25,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jeonhongseok/IdeaProjects/toy/pattern",
+    "last_opened_file_path": "/Users/jeonhongseok/IdeaProjects/toy/pattern/factory",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -36,12 +36,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ac6f974c-cab1-48bb-982f-8e2299a0137b" name="Changes" comment="" />
-      <created>1671295053061</created>
+      <changelist id="d311a177-4802-405a-a7f7-889f11ffe149" name="Changes" comment="" />
+      <created>1671292986959</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1671295053061</updated>
-      <workItem from="1671295054257" duration="611000" />
+      <updated>1671292986959</updated>
+      <workItem from="1671292988055" duration="607000" />
     </task>
     <servers />
   </component>
