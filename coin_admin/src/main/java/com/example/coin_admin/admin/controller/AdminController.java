@@ -46,4 +46,10 @@ public class AdminController {
         return as.selectCntBuy();
     }
 
+    @GetMapping("/selectCntContact")
+    @ResponseBody
+    public int selectCntContact() {
+        return as.selectCntContact();
+    }
+
 }

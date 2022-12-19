@@ -28,4 +28,8 @@ public class AdminRepository {
     public int selectCntBuy() {
         return am.selectCntBuy();
     }
+
+    public int selectCntContact() {
+        return am.selectCntContact();
+    }
 }

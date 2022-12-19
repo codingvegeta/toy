@@ -46,4 +46,11 @@
             buy
     </select>
 
+    <select id="selectCntContact" resultType="int">
+        select
+            count(*)
+        from
+            contact
+    </select>
+
 </mapper>
