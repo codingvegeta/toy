@@ -24,6 +24,9 @@ public class AdminService {
     public ArrayList<HashMap<String, Object>> selectPayment() {
         return ar.selectPayment();
     }
+    public  ArrayList<HashMap<String, Object>> selectBuy() {
+        return ar.selectBuy();
+    }
 
     public int selectCntMember() {
         return ar.selectCntMember();
