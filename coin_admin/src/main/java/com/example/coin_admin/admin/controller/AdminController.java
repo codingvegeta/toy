@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Objects;
 
 @Controller
 public class AdminController {
@@ -28,6 +29,11 @@ public class AdminController {
         return null;
     }
 
+    @GetMapping("/selectMember")
+    @ResponseBody
+    public ArrayList<HashMap<String, Object>> selectMember() {
+        return as.selectMember();
+    }
     @GetMapping("/selectCntMember")
     @ResponseBody
     public int selectCntMember() {

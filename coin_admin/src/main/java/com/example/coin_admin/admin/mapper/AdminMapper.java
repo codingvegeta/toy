@@ -10,6 +10,8 @@ import java.util.Objects;
 public interface AdminMapper {
     HashMap<String, String> loginAdmin(String id);
 
+    ArrayList<HashMap<String, Object>> selectMember();
+
     int selectCntMember();
 
     int selectAmountPayment();

@@ -17,6 +17,10 @@ public class AdminRepository {
         return am.loginAdmin(id);
     }
 
+    public ArrayList<HashMap<String, Object>> selectMember() {
+        return am.selectMember();
+    }
+
     public int selectCntMember() {
         return am.selectCntMember();
     }

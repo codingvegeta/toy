@@ -17,6 +17,10 @@ public class AdminService {
         return ar.loginAdmin(id);
     }
 
+    public ArrayList<HashMap<String, Object>> selectMember() {
+        return ar.selectMember();
+    }
+
     public int selectCntMember() {
         return ar.selectCntMember();
     }
