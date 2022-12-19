@@ -9,5 +9,8 @@ import java.util.Objects;
 @Mapper
 public interface AdminMapper {
     HashMap<String, String> loginAdmin(String id);
+
     int selectCntMember();
+
+    int selectAmountPayment();
 }

@@ -20,4 +20,8 @@ public class AdminService {
     public int selectCntMember() {
         return ar.selectCntMember();
     }
+
+    public int selectAmountPayment() {
+        return ar.selectAmountPayment();
+    }
 }

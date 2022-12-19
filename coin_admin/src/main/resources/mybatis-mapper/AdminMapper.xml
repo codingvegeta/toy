@@ -32,4 +32,11 @@
 
     </select>
 
+    <select id="selectAmountPayment" resultType="int">
+        select
+            sum(amount) money
+        from
+            payment
+    </select>
+
 </mapper>

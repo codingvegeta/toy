@@ -20,4 +20,8 @@ public class AdminRepository {
     public int selectCntMember() {
         return am.selectCntMember();
     }
+
+    public int selectAmountPayment() {
+        return am.selectAmountPayment();
+    }
 }
