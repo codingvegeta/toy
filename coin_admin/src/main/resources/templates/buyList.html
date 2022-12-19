@@ -35,7 +35,7 @@
   <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/static">
       <div class="sidebar-brand-icon rotate-n-15">
 
       </div>
@@ -143,32 +143,38 @@
       <div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">결제목록</h1>
+        <h1 class="h3 mb-2 text-gray-800">구매목록</h1>
         -
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
           <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">회원이 결제 한 목록</h6>
+            <h6 class="m-0 font-weight-bold text-primary">회원이 코인을 구매 한 목록</h6>
           </div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                  <th>결제아이디</th>
+                  <th>구매아이디</th>
                   <th>이메일</th>
-                  <th>결제금액</th>
-                  <th>UID</th>
-                  <th>결제일</th>
+                  <th>코인아이디</th>
+                  <th>코인명</th>
+                  <th>구매당시시세</th>
+                  <th>구매수량</th>
+                  <th>총구매액</th>
+                  <th>구매날짜</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
-                  <th>결제아이디</th>
+                  <th>구매아이디</th>
                   <th>이메일</th>
-                  <th>결제금액</th>
-                  <th>UID</th>
-                  <th>결제일</th>
+                  <th>코인아이디</th>
+                  <th>코인명</th>
+                  <th>구매당시시세</th>
+                  <th>구매수량</th>
+                  <th>총구매액</th>
+                  <th>구매날짜</th>
                 </tr>
                 </tfoot>
                 <tbody id="tbody">
@@ -246,7 +252,7 @@
   $(document).ready(function() {
 
     $.ajax({
-      url: "/selectPayment",
+      url: "/selectBuy",
       dataType: "json",
       success: function (data) {
         let con='';
@@ -254,8 +260,11 @@
           con+='<tr>';
           con+='<td>'+data[i].id+'</td>';
           con+='<td>'+data[i].email+'</td>';
+          con+='<td>'+data[i].coinId+'</td>';
+          con+='<td>'+data[i].name+'</td>';
+          con+='<td>'+data[i].price+'</td>';
           con+='<td>'+data[i].amount+'</td>';
-          con+='<td>'+data[i].uid+'</td>';
+          con+='<td>'+data[i].total+'</td>';
           con+='<td>'+data[i].indate+'</td>';
           con+='</tr>';
         }
