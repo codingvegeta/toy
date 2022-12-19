@@ -21,6 +21,10 @@ public class AdminRepository {
         return am.selectMember();
     }
 
+    public ArrayList<HashMap<String, Object>> selectPayment() {
+        return am.selectPayment();
+    }
+
     public int selectCntMember() {
         return am.selectCntMember();
     }

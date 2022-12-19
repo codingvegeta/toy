@@ -34,6 +34,13 @@ public class AdminController {
     public ArrayList<HashMap<String, Object>> selectMember() {
         return as.selectMember();
     }
+
+    @GetMapping("/selectPayment")
+    @ResponseBody
+    public ArrayList<HashMap<String, Object>> selectPayment() {
+        return as.selectPayment();
+    }
+
     @GetMapping("/selectCntMember")
     @ResponseBody
     public int selectCntMember() {
