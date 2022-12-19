@@ -53,6 +53,12 @@ public class AdminController {
         return as.selectContact();
     }
 
+    @GetMapping("/selectSubscribe")
+    @ResponseBody
+    public  ArrayList<HashMap<String, Object>> selectSubscribe() {
+        return as.selectSubscribe();
+    }
+
 
     @GetMapping("/selectCntMember")
     @ResponseBody

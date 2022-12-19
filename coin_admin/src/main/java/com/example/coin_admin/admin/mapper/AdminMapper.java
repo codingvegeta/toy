@@ -17,6 +17,7 @@ public interface AdminMapper {
     ArrayList<HashMap<String, Object>> selectBuy();
 
     ArrayList<HashMap<String, Object>> selectContact();
+    ArrayList<HashMap<String, Object>> selectSubscribe();
 
     int selectCntMember();
 

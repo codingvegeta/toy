@@ -33,6 +33,10 @@ public class AdminRepository {
         return am.selectContact();
     }
 
+    public  ArrayList<HashMap<String, Object>> selectSubscribe() {
+        return am.selectSubscribe();
+    }
+
     public int selectCntMember() {
         return am.selectCntMember();
     }

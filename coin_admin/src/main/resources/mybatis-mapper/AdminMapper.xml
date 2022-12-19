@@ -61,6 +61,14 @@
             contact
             </select>
 
+    <select id="selectSubscribe" resultType="HashMap">
+        select
+            email
+            ,DATE_FORMAT(indate,'%Y-%m-%d %H:%i') indate
+        FROM
+            subscribe
+    </select>
+
     <select id="selectCntMember" resultType="int">
         select
             count(*)
