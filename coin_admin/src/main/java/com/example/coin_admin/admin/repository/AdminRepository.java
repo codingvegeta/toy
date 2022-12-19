@@ -24,4 +24,8 @@ public class AdminRepository {
     public int selectAmountPayment() {
         return am.selectAmountPayment();
     }
+
+    public int selectCntBuy() {
+        return am.selectCntBuy();
+    }
 }

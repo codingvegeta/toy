@@ -24,4 +24,8 @@ public class AdminService {
     public int selectAmountPayment() {
         return ar.selectAmountPayment();
     }
+
+    public int selectCntBuy() {
+        return ar.selectCntBuy();
+    }
 }

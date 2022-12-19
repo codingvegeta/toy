@@ -40,4 +40,10 @@ public class AdminController {
         return as.selectAmountPayment();
     }
 
+    @GetMapping("/selectCntBuy")
+    @ResponseBody
+    public int selectCntBuy() {
+        return as.selectCntBuy();
+    }
+
 }
