@@ -48,7 +48,7 @@ public class MemberController {
     }
 
     @GetMapping("/havingBalance")
-    public @ResponseBody ArrayList<HashMap<String, Objects>> havingBalance(HttpSession session) {
+    public @ResponseBody ArrayList<HashMap<String, Object>> havingBalance(HttpSession session) {
         if (session.getAttribute("email") != null) {
             String email = String.valueOf(session.getAttribute("email"));
             System.out.println("memberService.havingBalance(email) = " + memberService.havingBalance(email));

@@ -14,7 +14,7 @@ public interface MemberMapper {
 
     int hadBalance(String email);
 
-    ArrayList<HashMap<String, Objects>> havingBalance(String email);
+    ArrayList<HashMap<String, Object>> havingBalance(String email);
 
     int moneyBalance(String email);
 }

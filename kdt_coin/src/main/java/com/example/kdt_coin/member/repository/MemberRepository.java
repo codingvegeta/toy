@@ -26,7 +26,7 @@ public class MemberRepository {
         return memberMapper.hadBalance(email);
     }
 
-    public ArrayList<HashMap<String, Objects>> havingBalance(String email) {
+    public ArrayList<HashMap<String, Object>> havingBalance(String email) {
         return memberMapper.havingBalance(email);
     }
 
