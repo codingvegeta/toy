@@ -1,34 +1,23 @@
 package com.example.coin_admin.admin.controller;
 
 import com.example.coin_admin.admin.service.AdminService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
 
+@Api(tags = {"관리자 조회 서비스"}, description = "관리자 조회 서비스")
 @Controller
 public class AdminController {
     @Autowired
     AdminService as;
 
-    @PostMapping("/login")
-    public String loginAdmin(String id, String password, HttpSession session) {
-        HashMap<String, String> admin = as.loginAdmin(id);
-        System.out.println(admin);
-        if (admin != null && admin.get("password").equals(password)) {
-            session.setAttribute("id", id);
-            System.out.println(session.getAttribute("id"));
-            return "index";
-        }
-        return null;
-    }
-
+    @ApiOperation(value = "총 회원 정보", notes = "총 회원 정보를 조회한다.")
     @GetMapping("/selectMember")
     @ResponseBody
     public ArrayList<HashMap<String, Object>> selectMember() {
@@ -55,10 +44,9 @@ public class AdminController {
 
     @GetMapping("/selectSubscribe")
     @ResponseBody
-    public  ArrayList<HashMap<String, Object>> selectSubscribe() {
+    public ArrayList<HashMap<String, Object>> selectSubscribe() {
         return as.selectSubscribe();
     }
-
 
     @GetMapping("/selectCntMember")
     @ResponseBody

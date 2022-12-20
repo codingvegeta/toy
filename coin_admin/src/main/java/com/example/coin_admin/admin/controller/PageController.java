@@ -30,11 +30,6 @@ public class PageController {
         return "buyList";
     }
 
-    /**
-     * "/goContact">연락요청목록</a>
-     * <h6 class="collapse-header">구독관리</h6>
-     * <a class="collapse-item" href="/goSubscribe"
-     */
     @GetMapping("/goContact")
     public String goContact() {
         return "contactList";
