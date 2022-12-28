@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.kdt_coin.mapper.MemberMapper">
+    <insert id="insertMember" parameterType="HashMap">
+        insert into member
+        ( email
+        , password
+        , name
+        , phone
+        , address
+        , detail)
+        values
+            (
+             #{email}
+             ,#{password}
+             ,#{name}
+             ,#{phone}
+             ,#{address}
+             ,#{detail}
+            )
+    </insert>
+
+    <select id="loginMember" parameterType="HashMap" resultType="HashMap">
+        select
+             email
+            , password
+        from member
+        where
+            email = #{email}
+        and
+            password = #{password}
+    </select>
+
+    <select id="hadBalance" parameterType="String" resultType="int">
+        select
+            IFNULL(sum(amount),0)
+            from
+            payment
+            where
+                email = #{email}
+    </select>
+
+    <select id="havingBalance" parameterType="String" resultType="HashMap">
+
+        SELECT
+            coinId
+             ,IFNULL(SUM(amount),0) smount
+        FROM
+            buy
+        WHERE email = #{email}
+        GROUP BY coinId
+
+    </select>
+
+    <select id="moneyBalance" parameterType="String" resultType="int">
+
+        SELECT (
+                       IFNULL((SELECT SUM(amount) FROM payment WHERE email = #{email}),0) -
+                       IFNULL((SELECT SUM(total) FROM buy WHERE email = #{email}),0)
+                   ) rest
+        FROM DUAL
+    </select>
+</mapper>
