@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/pattern/pattern" vcs="" />
+    <mapping directory="$PROJECT_DIR$/xenium-admin" vcs="Git" />
   </component>
 </project>
